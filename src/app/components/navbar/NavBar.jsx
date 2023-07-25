@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 
 const NavBar = () => {
 	return (
-		<div className="flex flex-row justify-around pr-8">
+		<div className="flex flex-row justify-between">
 			<Logo />
 			<Buttons />
 		</div>
