@@ -1,21 +1,21 @@
-import { useState } from "react";
-
 import PlayButton from "./PlayButton";
 import NounMeaning from "./nounmeaning/NounMeaning";
 
-const Word = () => {
+const Word = ({ definition }) => {
 	return (
 		<div>
 			<div className="flex justify-between pt-10">
 				<div>
-					<h1 className="font-bold text-6xl max-sm:text-4xl">Keyboard</h1>
-					<p className="text-purple-600 text-2xl pt-4">/ˈkiːbɔːd/</p>
+					<h1 className="font-bold text-6xl max-sm:text-4xl">
+						{definition.word}
+					</h1>
+					<p className="text-purple-600 text-2xl pt-4">{definition.phonetic}</p>
 				</div>
 				<div>
 					<PlayButton />
 				</div>
 			</div>
-			<NounMeaning />
+			<NounMeaning definition={definition} />
 		</div>
 	);
 };

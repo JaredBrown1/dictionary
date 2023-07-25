@@ -1,9 +1,9 @@
 import Definition from "./Definition";
 
-const NounMeaning = () => {
+const NounMeaning = ({ definition }) => {
 	return (
 		<div>
-			<Definition />
+			<Definition definition={definition} />
 		</div>
 	);
 };
