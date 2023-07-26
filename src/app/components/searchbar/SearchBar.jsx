@@ -14,6 +14,12 @@ const SearchBar = ({ onSearch }) => {
 		onSearch(input);
 	};
 
+	const handleKeyDown = (e) => {
+		if (e.keyCode === 13) {
+			onSearch(input);
+		}
+	};
+
 	return (
 		<div className="flex">
 			<div className="flex justify-center pt-10">
@@ -22,6 +28,7 @@ const SearchBar = ({ onSearch }) => {
 					type="text"
 					value={input}
 					onChange={handleInput}
+					onKeyDown={handleKeyDown}
 				/>
 			</div>
 			<div>
