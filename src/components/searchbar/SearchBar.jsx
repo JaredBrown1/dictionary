@@ -24,7 +24,7 @@ const SearchBar = ({ onSearch }) => {
 		<div className="flex">
 			<div className="flex justify-center lg:pt-10">
 				<input
-					className="w-[327px] h-[48px] lg:w-[736px] bg-gray-100 pl-4 rounded-md placeholder-shown:pl-4 placeholder-shown:font-bold"
+					className="w-[327px] h-[48px] sm:w-[689px] md:w-[689px] lg:w-[736px] lg:h-[64px] bg-gray-100 pl-4 rounded-md placeholder-shown:pl-4 placeholder-shown:font-bold"
 					type="text"
 					value={input}
 					onChange={handleInput}
@@ -32,7 +32,7 @@ const SearchBar = ({ onSearch }) => {
 				/>
 			</div>
 			<div>
-				<span className="p-4 lg:pt-14 pl-2 ml-[-40px] absolute cursor-pointer">
+				<span className="p-4 lg:pt-16 pl-2 ml-[-40px] absolute cursor-pointer">
 					<Image
 						src={SearchIcon}
 						alt="Search Icon"

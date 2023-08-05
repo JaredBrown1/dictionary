@@ -16,7 +16,7 @@ const Definition = ({ definition }) => {
 
 	if (definitions.length === 1) {
 		return (
-			<div className="flex justify-start flex-col w-[327px] lg:w-[736px]">
+			<div className="flex justify-start flex-col w-[327px] sm:w-[689px] md:w-[689px] lg:w-[736px]">
 				<div className="flex pt-4">
 					<h1 className="pr-4 text-xl font-bold">{partOfSpeech}</h1>
 					<div className="h-1 w-full mt-3 bg-gray-200"></div>
@@ -34,7 +34,7 @@ const Definition = ({ definition }) => {
 	let id = 0;
 
 	return (
-		<div className="flex justify-start flex-col w-[327px] lg:w-[736px]">
+		<div className="flex justify-start flex-col w-[327px] sm:w-[689px] md:w-[689px] lg:w-[736px]">
 			<div className="flex pt-4">
 				<h1 className="pr-4 text-xl font-bold">{partOfSpeech}</h1>
 				<div className="h-[2px] w-full mt-3 bg-gray-200"></div>
