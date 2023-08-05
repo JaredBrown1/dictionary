@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import NavBar from "../components/navbar/NavBar";
-import SearchBar from "../components/searchbar/SearchBar";
-import Word from "../components/word/Word";
+import NavBar from "../../components/navbar/NavBar";
+import SearchBar from "../../components/searchbar/SearchBar";
+import Word from "../../components/word/Word";
 
 const Home = () => {
 	const [word, setWord] = useState("");

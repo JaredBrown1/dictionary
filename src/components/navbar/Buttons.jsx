@@ -40,8 +40,8 @@ const Buttons = () => {
 
 	return (
 		<div className="flex">
-			<div className="flex pr-10 pt-1 border-r-2 h-10" ref={dropdownRef}>
-				<div className="relative">
+			<div className="flex lg:pr-10 pt-1 border-r-2 h-10" ref={dropdownRef}>
+				<div className="relative ">
 					<button
 						className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-700  rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 						onClick={toggleDropdown}
@@ -92,33 +92,24 @@ const Buttons = () => {
 						</div>
 					)}
 				</div>
-				{/* my code below */}
-				{/* <span>
-					<Image
-						src="/images/icon-arrow-down.svg"
-						width={20}
-						height={20}
-						alt="down arrow"
-						className="pt-2 pl-1"
-					/>
-				</span> */}
 			</div>
 
-			<div className="flex pl-6 pt-1 w-20">
+			<div className="flex pl-2 lg:pl-6 pt-1 lg:w-20">
 				<ReactSwitch
 					checked={checked}
 					onChange={handleChange}
 					checkedIcon={false}
 					uncheckedIcon={false}
 					onColor="#A445ED"
-					className="pr-6"
+					className="pr-2 lg:pr-6"
+					width={60}
 				/>
 				<Image
 					src="/images/icon-moon.svg"
 					alt="moon"
 					width={30}
 					height={30}
-					className="mb-6 pr-2"
+					className="mb-8 pr-2"
 				/>
 			</div>
 		</div>

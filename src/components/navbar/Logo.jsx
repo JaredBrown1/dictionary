@@ -4,8 +4,8 @@ import Icon from "public/images/logo.svg";
 
 const Logo = () => {
 	return (
-		<div className="pr-12">
-			<Image src={Icon} alt="Logo" width={50} height={50} />
+		<div className="lg:pr-12">
+			<Image src={Icon} alt="Logo" width={28} height={32} />
 		</div>
 	);
 };

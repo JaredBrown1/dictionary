@@ -19,12 +19,14 @@ const PlayButton = ({ audio }) => {
 	return (
 		<div>
 			<button className="cursor-pointer" onClick={handlePlayPause}>
-				<Image
-					src="/images/icon-play.svg"
-					width={80}
-					height={80}
-					alt="playbutton"
-				/>
+				<div className=" h-[48px] w-[48px]">
+					<Image
+						src="/images/icon-play.svg"
+						alt="playbutton"
+						width={48}
+						height={48}
+					/>
+				</div>
 			</button>
 			<audio ref={audioRef} src={audio}></audio>
 		</div>
