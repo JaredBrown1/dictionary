@@ -6,6 +6,7 @@ import { useFontsContext } from "../../../../context/fonts";
 
 import Image from "next/image";
 import ReactSwitch from "react-switch";
+import ThemeSwitcher from "../ThemeSwitcher";
 
 const Buttons = () => {
 	const [checked, setChecked] = useState(false);
@@ -97,7 +98,7 @@ const Buttons = () => {
 			</div>
 
 			<div className="flex pl-2 lg:pl-6 pt-1 lg:w-20">
-				<ReactSwitch
+				{/* <ReactSwitch
 					checked={checked}
 					onChange={handleChange}
 					checkedIcon={false}
@@ -105,7 +106,8 @@ const Buttons = () => {
 					onColor="#A445ED"
 					className="pr-2 lg:pr-6"
 					width={60}
-				/>
+				/> */}
+				<ThemeSwitcher />
 				<Image
 					src="/images/icon-moon.svg"
 					alt="moon"

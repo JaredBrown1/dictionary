@@ -1,6 +1,8 @@
 import "./globals.css";
-
+import Providers from "./providers";
 import { FontsProvider } from "../../context/fonts";
+
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 export const metadata = {
 	title: "Dictionary App",
@@ -10,9 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<FontsProvider>
-				<body>{children}</body>
-			</FontsProvider>
+			<body>
+				<Providers>
+					<FontsProvider>{children}</FontsProvider>
+				</Providers>
+			</body>
 		</html>
 	);
 }

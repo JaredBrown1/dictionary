@@ -3,7 +3,6 @@
 import HomePage from "./home/page";
 
 import { Roboto, Nunito, Oswald } from "next/font/google";
-
 import { useFontsContext } from "../../context/fonts";
 
 const font1 = Nunito({
