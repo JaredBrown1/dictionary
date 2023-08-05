@@ -2,13 +2,15 @@
 
 import { useState, useRef, useEffect } from "react";
 
+import { useFontsContext } from "../../../../context/fonts";
+
 import Image from "next/image";
 import ReactSwitch from "react-switch";
 
 const Buttons = () => {
 	const [checked, setChecked] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
-	const [selectedOption, setSelectedOption] = useState("Sans Serif");
+	const { fonts, setFonts } = useFontsContext();
 	const dropdownRef = useRef(null);
 
 	const handleChange = (val) => {
@@ -21,7 +23,7 @@ const Buttons = () => {
 
 	const handleOptionClick = (e) => {
 		const option = e.target.getAttribute("value");
-		setSelectedOption(option);
+		setFonts(option);
 		setIsOpen(false);
 	};
 
@@ -46,7 +48,7 @@ const Buttons = () => {
 						className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-700  rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 						onClick={toggleDropdown}
 					>
-						<span>{selectedOption}</span>
+						<span>{fonts}</span>
 						<Image
 							src="/images/icon-arrow-down.svg"
 							width={20}
@@ -68,25 +70,25 @@ const Buttons = () => {
 									className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
 									role="menuitem"
 									onClick={handleOptionClick}
-									value="Sans Serif"
+									value="Roboto"
 								>
-									Sans Serif
+									Roboto
 								</p>
 								<p
 									className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
 									role="menuitem"
 									onClick={handleOptionClick}
-									value="Serif"
+									value="Nunito"
 								>
-									Serif
+									Nunito
 								</p>
 								<p
 									className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
 									role="menuitem"
 									onClick={handleOptionClick}
-									value="Mono"
+									value="Oswald"
 								>
-									Mono
+									Oswald
 								</p>
 							</div>
 						</div>
