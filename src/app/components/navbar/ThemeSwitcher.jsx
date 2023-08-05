@@ -13,9 +13,13 @@ const ThemeSwitcher = () => {
 	const handleChange = (val) => {
 		setChecked(val);
 		setTheme(val ? "dark" : "light");
+		localStorage.setItem("theme", val ? "dark" : "light");
 	};
 
 	useEffect(() => {
+		localStorage.getItem("theme") === "dark"
+			? setChecked(true)
+			: setChecked(false);
 		setMounted(true);
 	}, []);
 
@@ -33,6 +37,7 @@ const ThemeSwitcher = () => {
 				onColor="#A445ED"
 				className="pr-2 lg:pr-6"
 				width={60}
+				handleDiameter={20}
 			/>
 		</div>
 	);

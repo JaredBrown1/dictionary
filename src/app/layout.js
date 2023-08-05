@@ -2,7 +2,7 @@ import "./globals.css";
 import Providers from "./providers";
 import { FontsProvider } from "../../context/fonts";
 
-import ThemeSwitcher from "./components/ThemeSwitcher";
+import ThemeSwitcher from "./components/navbar/ThemeSwitcher";
 
 export const metadata = {
 	title: "Dictionary App",

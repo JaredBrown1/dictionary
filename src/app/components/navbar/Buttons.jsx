@@ -6,7 +6,7 @@ import { useFontsContext } from "../../../../context/fonts";
 
 import Image from "next/image";
 import ReactSwitch from "react-switch";
-import ThemeSwitcher from "../ThemeSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Buttons = () => {
 	const [checked, setChecked] = useState(false);
@@ -46,21 +46,22 @@ const Buttons = () => {
 			<div className="flex lg:pr-10 pt-1 border-r-2 h-10" ref={dropdownRef}>
 				<div className="relative ">
 					<button
-						className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-700  rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+						className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium  rounded-md focus:outline-none"
 						onClick={toggleDropdown}
 					>
 						<span>{fonts}</span>
 						<Image
 							src="/images/icon-arrow-down.svg"
-							width={20}
+							width={30}
 							height={20}
 							alt="down arrow"
-							className="pl-1"
+							className="pl-3"
 						/>
 					</button>
-
 					{isOpen && (
-						<div className="absolute right-0 w-48 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+						<div
+							className={`absolute right-0 w-48 mt-2 rounded-2xl origin-top-right bg-white border-none shadow-lg drop-shadow-2xl dark:bg-[#1F1F1F] dark:shadow-[#A445ED] dark:shadow-lg dark:rounded-2xl`}
+						>
 							<div
 								className="py-1"
 								role="menu"
@@ -68,7 +69,7 @@ const Buttons = () => {
 								aria-labelledby="options-menu"
 							>
 								<p
-									className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+									className={`block px-4 py-2 text-lg hover:text-purple-600 cursor-pointer`}
 									role="menuitem"
 									onClick={handleOptionClick}
 									value="Roboto"
@@ -76,7 +77,7 @@ const Buttons = () => {
 									Roboto
 								</p>
 								<p
-									className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+									className="block px-4 py-2 text-lg  hover:text-purple-600 cursor-pointer"
 									role="menuitem"
 									onClick={handleOptionClick}
 									value="Nunito"
@@ -84,7 +85,7 @@ const Buttons = () => {
 									Nunito
 								</p>
 								<p
-									className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+									className="block px-4 py-2 text-lg hover:text-purple-600 cursor-pointer"
 									role="menuitem"
 									onClick={handleOptionClick}
 									value="Oswald"
@@ -98,22 +99,13 @@ const Buttons = () => {
 			</div>
 
 			<div className="flex pl-2 lg:pl-6 pt-1 lg:w-20">
-				{/* <ReactSwitch
-					checked={checked}
-					onChange={handleChange}
-					checkedIcon={false}
-					uncheckedIcon={false}
-					onColor="#A445ED"
-					className="pr-2 lg:pr-6"
-					width={60}
-				/> */}
 				<ThemeSwitcher />
 				<Image
 					src="/images/icon-moon.svg"
 					alt="moon"
 					width={30}
 					height={30}
-					className="mb-8 pr-2"
+					className="text-purple-600 mb-8 pr-2 "
 				/>
 			</div>
 		</div>

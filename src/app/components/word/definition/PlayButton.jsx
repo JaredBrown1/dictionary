@@ -6,6 +6,7 @@ import Image from "next/image";
 const PlayButton = ({ audio }) => {
 	const audioRef = useRef(null);
 	const [isPlaying, setIsPlaying] = useState(false);
+	const [imageSrc, setImageSrc] = useState("/images/icon-play-hover.svg");
 
 	const handlePlayPause = () => {
 		if (isPlaying) {
@@ -16,15 +17,29 @@ const PlayButton = ({ audio }) => {
 		setIsPlaying(!isPlaying);
 	};
 
+	const handleMouseLeave = () => {
+		setImageSrc("/images/icon-play.svg");
+	};
+
+	const handleMouseEnter = () => {
+		setImageSrc("/images/icon-play-hover.svg");
+	};
+
 	return (
 		<div>
-			<button className="cursor-pointer" onClick={handlePlayPause}>
-				<div className=" h-[48px] w-[48px]">
+			<button
+				className="cursor-pointer"
+				onClick={handlePlayPause}
+				onMouseEnter={handleMouseEnter}
+				onMouseLeave={handleMouseLeave}
+			>
+				<div className="h-[48px] w-[48px]">
 					<Image
-						src="/images/icon-play.svg"
+						src={imageSrc}
 						alt="playbutton"
 						width={48}
 						height={48}
+						className="fill-current"
 					/>
 				</div>
 			</button>
@@ -32,4 +47,5 @@ const PlayButton = ({ audio }) => {
 		</div>
 	);
 };
+
 export default PlayButton;
