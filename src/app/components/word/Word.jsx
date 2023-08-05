@@ -12,7 +12,11 @@ const Word = ({ definition }) => {
 					<p className="text-purple-600 text-2xl pt-4">{definition.phonetic}</p>
 				</div>
 				<div>
-					<PlayButton />
+					<PlayButton
+						audio={
+							definition ? definition.phonetics[0].audio : definition.phonetics
+						}
+					/>
 				</div>
 			</div>
 			<NounMeaning definition={definition} />

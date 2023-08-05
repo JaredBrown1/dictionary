@@ -24,7 +24,7 @@ const SearchBar = ({ onSearch }) => {
 		<div className="flex">
 			<div className="flex justify-center pt-10">
 				<input
-					className="h-16 w-[20rem] sm:w-[42rem] bg-gray-100 rounded-md placeholder-shown:pl-4 placeholder-shown:font-bold"
+					className="h-16 w-[736px] max-sm:w-[42rem] bg-gray-100 rounded-md placeholder-shown:pl-4 placeholder-shown:font-bold"
 					type="text"
 					value={input}
 					onChange={handleInput}
