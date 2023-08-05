@@ -21,6 +21,7 @@ const ThemeSwitcher = () => {
 			? setChecked(true)
 			: setChecked(false);
 		setMounted(true);
+		theme === "dark" ? setChecked(false) : setChecked(true);
 	}, []);
 
 	if (!mounted) {
