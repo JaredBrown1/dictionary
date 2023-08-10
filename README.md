@@ -34,7 +34,3 @@ Select the font dropdown at the top of the screen and select from 3 different fo
 - NextJS
 - TailwindCSS
 - Context API
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
