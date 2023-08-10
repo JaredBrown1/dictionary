@@ -11,17 +11,26 @@ const ThemeSwitcher = () => {
 	const { theme, setTheme } = useTheme();
 
 	const handleChange = (val) => {
+		console.log(val);
 		setChecked(val);
 		setTheme(val ? "dark" : "light");
 		localStorage.setItem("theme", val ? "dark" : "light");
 	};
 
 	useEffect(() => {
-		localStorage.getItem("theme") === "dark"
-			? setChecked(true)
-			: setChecked(false);
+		const localTheme = localStorage.getItem("theme");
+		if (localTheme) {
+			setChecked(localTheme === "dark");
+			setTheme(localTheme);
+		} else {
+			const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			const darkModeOn = mediaQuery.matches;
+			setChecked(darkModeOn);
+			setTheme(darkModeOn ? "dark" : "light");
+			localStorage.setItem("theme", darkModeOn ? "dark" : "light");
+		}
 		setMounted(true);
-		theme === "dark" ? setChecked(false) : setChecked(true);
+		theme === "dark" ? setChecked(true) : setChecked(false);
 	}, []);
 
 	if (!mounted) {

@@ -6,7 +6,7 @@ import Image from "next/image";
 const PlayButton = ({ audio }) => {
 	const audioRef = useRef(null);
 	const [isPlaying, setIsPlaying] = useState(false);
-	const [imageSrc, setImageSrc] = useState("/images/icon-play-hover.svg");
+	const [imageSrc, setImageSrc] = useState("/images/icon-play.svg");
 
 	const handlePlayPause = () => {
 		if (isPlaying) {
