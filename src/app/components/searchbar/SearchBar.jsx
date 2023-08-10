@@ -24,11 +24,12 @@ const SearchBar = ({ onSearch }) => {
 		<div className="flex">
 			<div className="flex justify-center lg:pt-10">
 				<input
-					className={`w-[327px] h-[48px] sm:w-[689px] md:w-[689px] lg:w-[736px] lg:h-[64px] bg-gray-100  dark:bg-[#1F1F1F] pl-4 rounded-md font-bold placeholder-shown:pl-4 placeholder-shown:font-bold focus:outline-purple-600 caret-purple-600`}
+					className={`w-[327px] h-[48px] sm:w-[689px] md:w-[689px] lg:w-[736px] lg:h-[64px] bg-gray-100  dark:bg-[#1F1F1F] pl-4 rounded-md font-bold placeholder-shown:pl-4 placeholder-shown:font-bold placeholder:text-lg focus:outline-purple-600 caret-purple-600`}
 					type="text"
 					value={input}
 					onChange={handleInput}
 					onKeyDown={handleKeyDown}
+					placeholder="Search for any word..."
 					required
 				/>
 			</div>
